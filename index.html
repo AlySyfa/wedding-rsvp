@@ -343,12 +343,11 @@
       <h2 class="rsvp-header">يسعدنا حضوركم</h2>
       <p class="rsvp-subtitle">Kindly Reply</p>
 
-      <!-- Replace action URL with your Google Form's action link -->
-      <form id="rsvpForm" action=https://forms.gle/2tgLiSi8J8VWUo7C6 method="POST" target="hidden_iframe">
+      <!-- Connected directly to your Google Form backend -->
+      <form id="rsvpForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAIjUzTBK55PT6vwxZ1ZNkiOcJI0YHQ8i1QMdRSatY6a6j9g/formResponse" method="POST" target="hidden_iframe">
         
         <div class="form-group">
           <label for="fullName">Full Name <span class="ar">الاسم بالكامل</span></label>
-          <!-- Replace name="entry.XXXXX" with your form's entry ID for Name -->
           <input type="text" id="fullName" name="entry.759119732" placeholder="اسمك الكريم" required>
         </div>
 
@@ -356,11 +355,10 @@
           <label>Will you attend? <span class="ar">هل ستتمكن من الحضور؟</span></label>
           <div class="radio-group">
             <label class="radio-option">
-              <!-- Replace name="entry.YYYYY" with your form's entry ID for Attendance -->
               <input type="radio" name="entry.1276016960" value="نعم" required> نعم
             </label>
             <label class="radio-option">
-              <input type="radio" name="entry.YYYYY" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
+              <input type="radio" name="entry.1276016960" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
             </label>
           </div>
         </div>
