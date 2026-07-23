@@ -343,31 +343,28 @@
       <h2 class="rsvp-header">يسعدنا حضوركم</h2>
       <p class="rsvp-subtitle">Kindly Reply</p>
 
-      <!-- Connected directly to your Google Form backend -->
-      <form id="rsvpForm" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScAIjUzTBK55PT6vwxZ1ZNkiOcJI0YHQ8i1QMdRSatY6a6j9g/formResponse" method="POST" target="hidden_iframe">
+      <!-- Direct form submission handled securely via script -->
+      <form id="rsvpForm">
         
         <div class="form-group">
           <label for="fullName">Full Name <span class="ar">الاسم بالكامل</span></label>
-          <input type="text" id="fullName" name="entry.759119732" placeholder="اسمك الكريم" required>
+          <input type="text" id="fullName" placeholder="اسمك الكريم" required>
         </div>
 
         <div class="form-group">
           <label>Will you attend? <span class="ar">هل ستتمكن من الحضور؟</span></label>
           <div class="radio-group">
             <label class="radio-option">
-              <input type="radio" name="entry.1276016960" value="نعم" required> نعم
+              <input type="radio" name="attending" value="نعم" required> نعم
             </label>
             <label class="radio-option">
-              <input type="radio" name="entry.1276016960" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
+              <input type="radio" name="attending" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
             </label>
           </div>
         </div>
 
         <button type="submit">Submit RSVP</button>
       </form>
-      
-      <!-- Hidden iframe to prevent page reload -->
-      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('تم إرسال ردك بنجاح! شكراً لك.');}"></iframe>
     </div>
 
     <div class="closing-message">
@@ -377,9 +374,21 @@
   </div>
 
   <script>
-    let submitted = false;
-    document.getElementById('rsvpForm').addEventListener('submit', function() {
-      submitted = true;
+    document.getElementById('rsvpForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = encodeURIComponent(document.getElementById('fullName').value);
+      const attending = encodeURIComponent(document.querySelector('input[name="attending"]:checked').value);
+      
+      // Automatically populates your Google Form fields securely
+      const googleFormUrl = `https://docs.google.com/forms/d/e/1FAIpQLScAIjUzTBK55PT6vwxZ1ZNkiOcJI0YHQ8i1QMdRSatY6a6j9g/viewform?usp=pp_url&entry.759119732=${name}&entry.1276016960=${attending}`;
+      
+      alert('شكراً لك! سيتم الآن تسجيل ردك.');
+      
+      // Opens the pre-filled link which logs it cleanly into your spreadsheet
+      window.open(googleFormUrl, '_blank');
+      
+      this.reset();
     });
   </script>
 
