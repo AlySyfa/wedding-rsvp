@@ -21,8 +21,7 @@
     }
 
     :root {
-      --bg-color: #fdf6f7; /* Soft Light Blush Pink */
-      --card-bg: rgba(255, 255, 255, 0.95);
+      --card-bg: rgba(255, 255, 255, 0.92);
       --primary-color: #9e5b68; /* Rose Plum / Dusty Rose */
       --primary-hover: #824753;
       --text-main: #3a2e31;
@@ -30,7 +29,7 @@
       --accent-rose: #c88a95; /* Soft Berry Accent */
       --accent-gold: #d4a373; /* Warm Rose Gold */
       --border-color: #f0d8dd;
-      --radius: 18px;
+      --radius: 20px;
     }
 
     * {
@@ -41,11 +40,10 @@
 
     body {
       font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif; 
-      background-color: var(--bg-color);
       
-      /* Subtle Pink Floral Dot Pattern */
-      background-image: radial-gradient(rgba(200, 138, 149, 0.18) 1.5px, transparent 1.5px);
-      background-size: 24px 24px;
+      /* Vibrant Romantic Floral/Blush Gradient Background */
+      background: linear-gradient(135deg, #fce4e8 0%, #f3d2d9 40%, #e8bac4 75%, #ebd8cb 100%);
+      background-attachment: fixed;
       
       color: var(--text-main);
       display: flex;
@@ -57,10 +55,10 @@
 
     .container {
       background: var(--card-bg);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.85);
-      box-shadow: 0 20px 45px rgba(158, 91, 104, 0.12);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 2px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 25px 50px rgba(158, 91, 104, 0.2);
       border-radius: var(--radius);
       padding: 50px 40px 40px;
       max-width: 540px;
@@ -120,9 +118,9 @@
 
     /* Location Card Section */
     .location-box {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.8);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 14px;
       padding: 20px;
       margin-bottom: 30px;
       text-align: center;
@@ -130,32 +128,17 @@
     }
 
     .location-title {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: var(--primary-color);
       font-weight: 700;
       margin-bottom: 6px;
     }
 
     .location-venue {
-      font-size: 1.35rem;
+      font-size: 1.4rem;
       font-weight: 700;
       color: var(--primary-color);
-      margin-bottom: 4px;
-    }
-
-    .location-subvenue {
-      font-size: 1.15rem;
-      font-weight: 600;
-      color: var(--text-main);
-      margin-bottom: 10px;
-    }
-
-    .location-details {
-      font-family: 'Cairo', 'Amiri', serif;
-      font-size: 0.98rem;
-      color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
     .maps-button {
@@ -345,12 +328,8 @@
 
     <!-- Location Section -->
     <div class="location-box">
-      <div class="location-title">📍 المكان والعنوان / Venue & Location</div>
+      <div class="location-title">المكان والعنوان / Venue & Location</div>
       <div class="location-venue">فيلا لا ريفا (Villa La Riva)</div>
-      <div class="location-subvenue">جزيرة بين البحرين</div>
-      <div class="location-details">
-        الدخول بالمركب الخاص بالمكان من المنيب، آخر شارع البحر الأعظم بعد مترو المنيب بـ ٥٠٠ متر، تحت كوبري الاصبجي، بجوار مدخل حدائق الري.
-      </div>
       <a href="https://maps.app.goo.gl/pXPJq47gDfPK4TQu7" target="_blank" rel="noopener noreferrer" class="maps-button">
         🗺️ فتح على خرائط جوجل / Google Maps
       </a>
