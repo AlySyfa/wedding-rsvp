@@ -8,7 +8,7 @@
   <!-- Fonts: Arslan Wessam Calligraphy & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     /* Arslan Wessam Web Font Integration */
@@ -21,15 +21,15 @@
     }
 
     :root {
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --primary-color: #9e5b68; /* Rose Plum / Dusty Rose */
-      --primary-hover: #824753;
-      --text-main: #3a2e31;
-      --text-muted: #78686c;
-      --accent-rose: #c88a95; /* Soft Berry Accent */
-      --accent-gold: #d4a373; /* Warm Rose Gold */
-      --border-color: #f0d8dd;
-      --radius: 20px;
+      --card-bg: rgba(255, 255, 255, 0.94);
+      --primary-color: #8c4a57; /* Rich Dusty Rose / Berry */
+      --primary-hover: #733b46;
+      --text-main: #2d2325;
+      --text-muted: #6b5c60;
+      --accent-rose: #b87380;
+      --accent-gold: #c9935f; /* Warm Gold */
+      --border-color: #ebd3d8;
+      --radius: 28px;
     }
 
     * {
@@ -41,8 +41,8 @@
     body {
       font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif; 
       
-      /* Vibrant Romantic Floral/Blush Gradient Background */
-      background: linear-gradient(135deg, #fce4e8 0%, #f3d2d9 40%, #e8bac4 75%, #ebd8cb 100%);
+      /* Rich Romantic Gradient Background */
+      background: linear-gradient(135deg, #fce8ec 0%, #f5d4dc 40%, #eabcc7 75%, #ebd8cb 100%);
       background-attachment: fixed;
       
       color: var(--text-main);
@@ -50,145 +50,157 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 30px 20px;
+      padding: 50px 20px;
     }
 
+    /* Expanded Container for Spacing & Breathability */
     .container {
       background: var(--card-bg);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      border: 2px solid rgba(255, 255, 255, 0.9);
-      box-shadow: 0 25px 50px rgba(158, 91, 104, 0.2);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 2px solid rgba(255, 255, 255, 0.95);
+      box-shadow: 0 30px 60px rgba(140, 74, 87, 0.18);
       border-radius: var(--radius);
-      padding: 50px 40px 40px;
-      max-width: 540px;
+      padding: 60px 50px 50px;
+      max-width: 680px; /* Increased from 540px */
       width: 100%;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
 
-    /* Decorative Corner Accents */
+    /* Soft Corner Accents */
     .decor {
       position: absolute;
-      font-size: 1.6rem;
+      font-size: 2rem;
       user-select: none;
       pointer-events: none;
+      opacity: 0.85;
     }
-    .top-left { top: 12px; left: 15px; transform: rotate(-20deg); }
-    .top-right { top: 12px; right: 15px; transform: rotate(20deg); }
-    .bottom-left { bottom: 12px; left: 15px; transform: rotate(15deg); }
-    .bottom-right { bottom: 12px; right: 15px; transform: rotate(-15deg); }
+    .top-left { top: 20px; left: 20px; transform: rotate(-20deg); }
+    .top-right { top: 20px; right: 20px; transform: rotate(20deg); }
+    .bottom-left { bottom: 20px; left: 20px; transform: rotate(15deg); }
+    .bottom-right { bottom: 20px; right: 20px; transform: rotate(-15deg); }
 
-    /* Photo Styling */
+    /* Prominent Hero Photo */
     .photo-container {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
     }
 
     .hero-photo {
-      width: 150px;
-      height: 150px;
+      width: 220px; /* Scaled up from 150px */
+      height: 220px;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid var(--accent-gold);
-      box-shadow: 0 8px 20px rgba(158, 91, 104, 0.25);
+      border: 4px solid var(--accent-gold);
+      box-shadow: 0 12px 28px rgba(140, 74, 87, 0.22);
+      transition: transform 0.4s ease;
+    }
+
+    .hero-photo:hover {
+      transform: scale(1.02);
     }
 
     .names-header {
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .names-header h2 {
-      font-size: 1.6rem;
+      font-size: 2rem;
       color: var(--accent-gold);
       font-weight: 600;
-      margin-bottom: 5px;
+      margin-bottom: 8px;
     }
 
     .names-header h1.arabic-names {
-      font-size: 3.2rem;
+      font-size: 4rem; /* Prominent Calligraphy Heading */
       color: var(--primary-color);
-      line-height: 1.2;
+      line-height: 1.25;
       font-weight: 700;
     }
 
     .names-header h1.english-names {
       font-family: 'Montserrat', sans-serif;
-      font-size: 1.8rem;
-      letter-spacing: 2px;
+      font-size: 2.2rem;
+      letter-spacing: 3px;
       color: var(--accent-rose);
-      font-weight: 500;
-      margin-top: 5px;
+      font-weight: 600;
+      margin-top: 8px;
+      text-transform: uppercase;
     }
 
-    /* Clean Divider Line */
+    /* Elegant Divider Line */
     .header-divider {
-      width: 80px;
-      height: 2px;
+      width: 120px;
+      height: 3px;
       background-color: var(--accent-gold);
-      margin: 25px auto;
-      border-radius: 2px;
+      margin: 30px auto;
+      border-radius: 3px;
     }
 
-    /* Location Card Section */
+    /* Location Box */
     .location-box {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.85);
       border: 1px solid var(--border-color);
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 30px;
+      border-radius: 18px;
+      padding: 28px 24px;
+      margin-bottom: 35px;
       text-align: center;
-      box-shadow: 0 4px 15px rgba(158, 91, 104, 0.05);
+      box-shadow: 0 6px 20px rgba(140, 74, 87, 0.06);
     }
 
     .location-title {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: var(--primary-color);
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .location-venue {
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       font-weight: 700;
       color: var(--primary-color);
-      margin-bottom: 14px;
+      margin-bottom: 18px;
     }
 
     .maps-button {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 10px 20px;
+      gap: 10px;
+      padding: 12px 28px;
       background-color: #ffffff;
       color: var(--primary-color);
-      border: 1.5px solid var(--primary-color);
-      border-radius: 8px;
+      border: 2px solid var(--primary-color);
+      border-radius: 12px;
       font-family: 'Montserrat', 'Cairo', sans-serif;
-      font-size: 0.95rem;
+      font-size: 1.05rem;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(140, 74, 87, 0.08);
     }
 
     .maps-button:hover {
       background-color: var(--primary-color);
       color: #ffffff;
+      transform: translateY(-2px);
     }
 
     h3.rsvp-title {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: var(--text-main);
-      margin-bottom: 5px;
+      margin-bottom: 8px;
       font-weight: 700;
     }
 
     p.subtitle {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.85rem;
+      font-size: 1rem;
       color: var(--text-muted);
-      margin-bottom: 30px;
+      margin-bottom: 35px;
       font-style: italic;
     }
 
@@ -197,33 +209,33 @@
     }
 
     .form-group {
-      margin-bottom: 22px;
+      margin-bottom: 28px;
     }
 
     label {
       display: block;
-      font-size: 1.15rem;
+      font-size: 1.35rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: var(--primary-color);
     }
     
     label .en {
       font-family: 'Montserrat', sans-serif;
-      font-weight: 400;
-      font-size: 0.8rem;
+      font-weight: 500;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      margin-right: 6px;
+      margin-right: 8px;
     }
 
     input[type="text"],
     select {
       width: 100%;
-      padding: 12px 16px;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
+      padding: 16px 20px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
       font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif;
-      font-size: 1.05rem;
+      font-size: 1.25rem;
       background: #ffffff;
       transition: all 0.3s ease;
       outline: none;
@@ -233,13 +245,13 @@
     input:focus,
     select:focus {
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 4px rgba(158, 91, 104, 0.15);
+      box-shadow: 0 0 0 4px rgba(140, 74, 87, 0.15);
     }
 
     .radio-group {
       display: flex;
-      gap: 12px;
-      margin-top: 5px;
+      gap: 16px;
+      margin-top: 8px;
     }
 
     .radio-option {
@@ -247,57 +259,59 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
-      padding: 12px;
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
+      gap: 10px;
+      padding: 16px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 14px;
       background: #fff;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-size: 1.1rem;
-      font-weight: 600;
+      font-size: 1.3rem;
+      font-weight: 700;
     }
 
     .radio-option:hover {
       border-color: var(--primary-color);
-      background-color: rgba(158, 91, 104, 0.04);
+      background-color: rgba(140, 74, 87, 0.04);
     }
 
     .radio-option input[type="radio"] {
       accent-color: var(--primary-color);
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
     }
 
     button[type="submit"] {
       width: 100%;
-      padding: 14px;
+      padding: 18px;
       background-color: var(--primary-color);
       color: #ffffff;
       border: none;
-      border-radius: 10px;
+      border-radius: 14px;
       font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif;
-      font-size: 1.3rem;
+      font-size: 1.6rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.1s ease;
-      margin-top: 15px;
+      transition: all 0.3s ease;
+      margin-top: 20px;
+      box-shadow: 0 8px 20px rgba(140, 74, 87, 0.25);
     }
 
     button[type="submit"]:hover {
       background-color: var(--primary-hover);
+      transform: translateY(-2px);
     }
 
     button[type="submit"]:active {
-      transform: scale(0.98);
+      transform: scale(0.99);
     }
 
     /* Closing Message */
     .closing-message {
-      margin-top: 30px;
-      padding-top: 20px;
+      margin-top: 40px;
+      padding-top: 25px;
       border-top: 1px stroke var(--border-color);
-      font-size: 1.25rem;
+      font-size: 1.5rem;
       color: var(--primary-color);
       font-weight: 700;
       line-height: 1.4;
@@ -309,10 +323,12 @@
       margin-top: 4px;
     }
 
-    @media (max-width: 480px) {
-      .container { padding: 40px 22px 30px; }
-      .names-header h1.arabic-names { font-size: 2.6rem; }
-      .radio-group { flex-direction: column; gap: 10px; }
+    @media (max-width: 600px) {
+      .container { padding: 45px 25px 35px; }
+      .hero-photo { width: 170px; height: 170px; }
+      .names-header h1.arabic-names { font-size: 3.2rem; }
+      .names-header h1.english-names { font-size: 1.6rem; }
+      .radio-group { flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
@@ -324,7 +340,7 @@
     <span class="decor bottom-left">🌸🍃</span>
     <span class="decor bottom-right">🍃🦋</span>
 
-    <!-- Hero Photo -->
+    <!-- Prominent Hero Photo -->
     <div class="photo-container">
       <img src="./WhatsApp%20Image%202026-07-23%20at%201.04.38%20PM.jpeg" alt="Aly & Sarah" class="hero-photo">
     </div>
@@ -337,7 +353,7 @@
 
     <div class="header-divider"></div>
 
-    <!-- Location Section -->
+    <!-- Location Box -->
     <div class="location-box">
       <div class="location-title">المكان والعنوان / Venue & Location</div>
       <div class="location-venue">فيلا لا ريفا (Villa La Riva)</div>
