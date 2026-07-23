@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kindly Respond | Aly & Sarah</title>
+  <title>فرح علي و سارة | Aly & Sarah's Wedding</title>
+  
   <!-- Google Fonts: Aref Ruqaa (Arabic Calligraphy) & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      /* Palette: Teal Green Gradient, Soft Cards, Gold Accent */
+      --card-bg: rgba(255, 255, 255, 0.94);
       --primary-color: #1a4d4a; /* Deep Teal Green */
       --primary-hover: #123836;
-      --card-bg: rgba(255, 255, 255, 0.92);
-      --text-color: #2c302e;
-      --accent-color: #d4af37; /* Gold */
+      --text-main: #2c302e;
+      --text-muted: #666;
+      --accent-gold: #c5a059;
       --border-color: #d1deda;
-      --radius: 14px;
+      --radius: 18px;
     }
 
     * {
@@ -28,96 +29,160 @@
     }
 
     body {
-      font-family: 'Montserrat', sans-serif;
-      /* Vibrant Teal Green to Soft Light Green Gradient */
+      font-family: 'Aref Ruqaa', serif; 
+      /* Spiced Up Teal Green to Light Green Gradient */
       background: linear-gradient(135deg, #0e3835 0%, #2a6b63 50%, #8ebfb2 100%);
       background-attachment: fixed;
-      color: var(--text-color);
+      
+      color: var(--text-main);
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 30px 20px;
     }
 
     .container {
       background: var(--card-bg);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.2);
       border-radius: var(--radius);
-      padding: 40px;
-      max-width: 520px;
+      padding: 50px 40px 40px;
+      max-width: 540px;
       width: 100%;
       text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Floral and Butterfly Decorative Accents */
+    .decor {
+      position: absolute;
+      font-size: 1.6rem;
+      user-select: none;
+      pointer-events: none;
+    }
+    .top-left { top: 12px; left: 15px; transform: rotate(-20deg); }
+    .top-right { top: 12px; right: 15px; transform: rotate(20deg); }
+    .bottom-left { bottom: 12px; left: 15px; transform: rotate(15deg); }
+    .bottom-right { bottom: 12px; right: 15px; transform: rotate(-15deg); }
+
+    .names-header {
+      margin-bottom: 25px;
+    }
+
+    .names-header h2 {
+      font-size: 1.8rem;
+      color: var(--accent-gold);
+      font-weight: 400;
+      margin-bottom: 5px;
+    }
+
+    .names-header h1.arabic-names {
+      font-size: 3.2rem;
+      color: var(--primary-color);
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .names-header h1.english-names {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: var(--primary-color);
+      font-weight: 500;
+      margin-top: 5px;
     }
 
     .header-divider {
-      width: 60px;
-      height: 2px;
-      background-color: var(--accent-color);
-      margin: 15px auto 25px;
+      width: 80px;
+      height: 1px;
+      background-color: var(--accent-gold);
+      margin: 20px auto;
+      position: relative;
+    }
+    .header-divider::after {
+      content: '🌸 🦋 🌸';
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--card-bg);
+      padding: 0 10px;
+      font-size: 0.9rem;
     }
 
-    h1 {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      letter-spacing: 0.5px;
+    h3.rsvp-title {
+      font-size: 2rem;
+      color: var(--text-main);
+      margin-bottom: 5px;
     }
 
     p.subtitle {
-      font-size: 0.95rem;
-      color: #555;
-      margin-bottom: 25px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 30px;
       font-style: italic;
     }
 
     form {
-      text-align: left;
+      text-align: right;
     }
 
     .form-group {
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     label {
       display: block;
-      font-size: 0.85rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1.2rem;
+      font-weight: 700;
       margin-bottom: 8px;
-      color: var(--text-color);
+      color: var(--primary-color);
+    }
+    
+    label .en {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-right: 6px;
     }
 
     input[type="text"],
     input[type="email"],
-    select,
-    textarea {
+    select {
       width: 100%;
       padding: 12px 16px;
       border: 1px solid var(--border-color);
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
+      border-radius: 10px;
+      font-family: 'Aref Ruqaa', serif;
+      font-size: 1.1rem;
       background: #ffffff;
       transition: all 0.3s ease;
       outline: none;
+      color: var(--text-main);
+    }
+
+    input[type="email"] {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.95rem;
+      direction: ltr;
+      text-align: left;
     }
 
     input:focus,
-    select:focus,
-    textarea:focus {
+    select:focus {
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 3px rgba(26, 77, 74, 0.18);
+      box-shadow: 0 0 0 4px rgba(26, 77, 74, 0.15);
     }
 
     .radio-group {
       display: flex;
-      gap: 15px;
+      gap: 12px;
       margin-top: 5px;
     }
 
@@ -129,27 +194,23 @@
       gap: 8px;
       padding: 12px;
       border: 1px solid var(--border-color);
-      border-radius: 8px;
+      border-radius: 10px;
       background: #fff;
       cursor: pointer;
       transition: all 0.3s ease;
-      font-size: 1rem;
+      font-size: 1.2rem;
+      font-weight: 700;
     }
 
     .radio-option:hover {
       border-color: var(--primary-color);
+      background-color: rgba(26, 77, 74, 0.03);
     }
 
     .radio-option input[type="radio"] {
       accent-color: var(--primary-color);
-    }
-
-    /* Arabic Text Styling inside the radio option */
-    .arabic-yes {
-      font-family: 'Aref Ruqaa', serif;
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--primary-color);
+      width: 18px;
+      height: 18px;
     }
 
     button[type="submit"] {
@@ -158,15 +219,13 @@
       background-color: var(--primary-color);
       color: #ffffff;
       border: none;
-      border-radius: 8px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      border-radius: 10px;
+      font-family: 'Aref Ruqaa', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
       cursor: pointer;
       transition: background-color 0.3s ease, transform 0.1s ease;
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     button[type="submit"]:hover {
@@ -174,62 +233,92 @@
     }
 
     button[type="submit"]:active {
-      transform: scale(0.99);
+      transform: scale(0.98);
+    }
+
+    /* Sweet Cute Closing Message */
+    .closing-message {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px stroke var(--border-color);
+      font-size: 1.3rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .closing-message .heart {
+      color: #d9534f;
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 40px 22px 30px; }
+      .names-header h1.arabic-names { font-size: 2.6rem; }
+      .radio-group { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <h1>Kindly Respond</h1>
+    <!-- Garden & Butterfly Corner Decors -->
+    <span class="decor top-left">🦋🌺</span>
+    <span class="decor top-right">🌸🦋</span>
+    <span class="decor bottom-left">🌸🍃</span>
+    <span class="decor bottom-right">🍃🦋</span>
+
+    <div class="names-header">
+      <h2>فرح / Wedding</h2>
+      <h1 class="arabic-names">علي و سارة</h1>
+      <h1 class="english-names">Aly & Sarah</h1>
+    </div>
+
     <div class="header-divider"></div>
-    <p class="subtitle">Please submit your RSVP details below.</p>
+
+    <h3 class="rsvp-title">هتنورونا وتفرحونا!</h3>
+    <p class="subtitle">Please let us know if you can join us.</p>
 
     <form id="rsvpForm">
       <div class="form-group">
-        <label for="fullName">Full Name(s)</label>
-        <input type="text" id="fullName" placeholder="Jane & John Doe" required>
+        <label for="fullName">الاسم بالكامل <span class="en">/ Full Name</span></label>
+        <input type="text" id="fullName" placeholder="اسمك الكريم" required>
       </div>
 
       <div class="form-group">
-        <label for="email">Email Address</label>
+        <label for="email">البريد الإلكتروني <span class="en">/ Email Address</span></label>
         <input type="email" id="email" placeholder="your.email@example.com" required>
       </div>
 
       <div class="form-group">
-        <label>Will you be attending?</label>
+        <label>هتقدر تيجي؟ <span class="en">/ Will you attend?</span></label>
         <div class="radio-group">
           <label class="radio-option">
-            <input type="radio" name="attending" value="yes" required> <span class="arabic-yes">نعم</span>
+            <input type="radio" name="attending" value="yes" required> نعم
           </label>
           <label class="radio-option">
-            <input type="radio" name="attending" value="no"> Regretfully Declines
+            <input type="radio" name="attending" value="no"> للأسف مش هقدر
           </label>
         </div>
       </div>
 
       <div class="form-group">
-        <label for="guests">Number of Guests</label>
+        <label for="guests">عدد الأفراد <span class="en">/ Number of Guests</span></label>
         <select id="guests">
-          <option value="1">1 Guest</option>
-          <option value="2">2 Guests</option>
-          <option value="3">3 Guests</option>
-          <option value="4">4 Guests</option>
+          <option value="1">فرد واحد (1)</option>
+          <option value="2">فردين (2)</option>
+          <option value="3">3 أفراد (3)</option>
+          <option value="4">4 أفراد (4)</option>
         </select>
       </div>
 
-      <div class="form-group">
-        <label for="dietary">Dietary Restrictions</label>
-        <input type="text" id="dietary" placeholder="Vegetarian, Allergies, etc.">
-      </div>
-
-      <div class="form-group">
-        <label for="song">Song Request</label>
-        <input type="text" id="song" placeholder="Your favorite party song">
-      </div>
-
-      <button type="submit">Submit RSVP</button>
+      <button type="submit">تأكيد الحضور / Submit RSVP</button>
     </form>
+
+    <div class="closing-message">
+      مش هتكمل فرحتنا غير بوجودكم معانا! <span class="heart">💖</span>
+    </div>
   </div>
 
 </body>
