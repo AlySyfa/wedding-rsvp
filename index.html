@@ -193,12 +193,11 @@
     }
 
     /* Obvious, Boxy Inputs */
-    input[type="text"],
-    select {
+    input[type="text"] {
       width: 100%;
       padding: 16px 20px;
       border: 1.5px solid var(--border-color);
-      border-radius: 12px; /* Smooth rounded boxes */
+      border-radius: 12px;
       background: var(--input-bg);
       font-family: 'Amiri', serif;
       font-size: 1.2rem;
@@ -208,21 +207,10 @@
       transition: all 0.3s ease;
     }
 
-    input:focus,
-    select:focus {
+    input:focus {
       border-color: var(--primary-color);
       background: #FFFFFF;
       box-shadow: 0 0 0 4px rgba(148, 110, 107, 0.15);
-    }
-
-    /* Custom Select Arrow Styling */
-    select {
-      appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A726E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-      background-repeat: no-repeat;
-      background-position: left 15px center;
-      background-size: 16px;
-      padding-left: 40px;
     }
 
     /* Obvious Radio Card Boxes */
@@ -334,7 +322,6 @@
   <div class="wedding-wrapper">
     
     <div class="hero-section">
-      <!-- Your image applied to the modern editorial arch -->
       <img src="./WhatsApp%20Image%202026-07-23%20at%201.04.38%20PM.jpeg" alt="Aly & Sarah" class="hero-photo">
     </div>
 
@@ -356,36 +343,33 @@
       <h2 class="rsvp-header">يسعدنا حضوركم</h2>
       <p class="rsvp-subtitle">Kindly Reply</p>
 
-      <form id="rsvpForm">
+      <!-- Replace action URL with your Google Form's action link -->
+      <form id="rsvpForm" action="YOUR_GOOGLE_FORM_ACTION_URL" method="POST" target="hidden_iframe">
+        
         <div class="form-group">
           <label for="fullName">Full Name <span class="ar">الاسم بالكامل</span></label>
-          <input type="text" id="fullName" placeholder="اسمك الكريم" required>
+          <!-- Replace name="entry.XXXXX" with your form's entry ID for Name -->
+          <input type="text" id="fullName" name="entry.XXXXX" placeholder="اسمك الكريم" required>
         </div>
 
         <div class="form-group">
           <label>Will you attend? <span class="ar">هل ستتمكن من الحضور؟</span></label>
           <div class="radio-group">
             <label class="radio-option">
-              <input type="radio" name="attending" value="yes" required> نعم
+              <!-- Replace name="entry.YYYYY" with your form's entry ID for Attendance -->
+              <input type="radio" name="entry.YYYYY" value="نعم" required> نعم
             </label>
             <label class="radio-option">
-              <input type="radio" name="attending" value="no"> للأسف، لا أستطيع الحضور
+              <input type="radio" name="entry.YYYYY" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
             </label>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="guests">Number of Guests <span class="ar">عدد الأفراد</span></label>
-          <select id="guests">
-            <option value="1">فرد واحد (1)</option>
-            <option value="2">فردين (2)</option>
-            <option value="3">3 أفراد (3)</option>
-            <option value="4">4 أفراد (4)</option>
-          </select>
-        </div>
-
         <button type="submit">Submit RSVP</button>
       </form>
+      
+      <!-- Hidden iframe to prevent page reload -->
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){alert('تم إرسال ردك بنجاح! شكراً لك.');}"></iframe>
     </div>
 
     <div class="closing-message">
@@ -393,6 +377,13 @@
     </div>
 
   </div>
+
+  <script>
+    let submitted = false;
+    document.getElementById('rsvpForm').addEventListener('submit', function() {
+      submitted = true;
+    });
+  </script>
 
 </body>
 </html>
