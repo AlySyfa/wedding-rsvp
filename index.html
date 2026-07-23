@@ -27,7 +27,6 @@
     }
 
     body {
-      /* Vibrant but elegant blush-to-champagne gradient background */
       background: linear-gradient(135deg, #f2d5d9 0%, #fae6e9 40%, #eed6cc 100%);
       background-attachment: fixed;
       color: var(--text-main);
@@ -39,7 +38,6 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* Main Editorial Wrapper with subtle glass effect */
     .wedding-wrapper {
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
@@ -53,7 +51,6 @@
       position: relative;
     }
 
-    /* --- Hero Image (Editorial Arch) --- */
     .hero-section {
       text-align: center;
       margin-bottom: 40px;
@@ -64,7 +61,6 @@
       max-width: 300px;
       height: 400px;
       object-fit: cover;
-      /* The modern arch crop */
       border-radius: 200px 200px 12px 12px;
       margin: 0 auto 30px;
       display: block;
@@ -72,7 +68,6 @@
       border: 4px solid #FFFFFF;
     }
 
-    /* --- Typography --- */
     .names-header {
       margin-bottom: 40px;
       text-align: center;
@@ -103,7 +98,6 @@
       font-style: italic;
     }
 
-    /* --- Location Details --- */
     .details-section {
       text-align: center;
       margin-bottom: 50px;
@@ -144,7 +138,6 @@
       opacity: 0.7;
     }
 
-    /* --- RSVP Form --- */
     .rsvp-header {
       text-align: center;
       font-size: 2.4rem;
@@ -170,7 +163,6 @@
       margin-bottom: 30px;
     }
 
-    /* Highlighted labels */
     label {
       display: block;
       font-family: 'Montserrat', sans-serif;
@@ -192,7 +184,6 @@
       font-weight: 700;
     }
 
-    /* Obvious, Boxy Inputs */
     input[type="text"] {
       width: 100%;
       padding: 16px 20px;
@@ -213,7 +204,6 @@
       box-shadow: 0 0 0 4px rgba(148, 110, 107, 0.15);
     }
 
-    /* Obvious Radio Card Boxes */
     .radio-group {
       display: flex;
       flex-direction: column;
@@ -271,7 +261,6 @@
       background: #FFFFFF;
     }
 
-    /* Solid Minimalist Button */
     button[type="submit"] {
       width: 100%;
       padding: 18px;
@@ -343,20 +332,25 @@
       <h2 class="rsvp-header">يسعدنا حضوركم</h2>
       <p class="rsvp-subtitle">Kindly Reply</p>
 
-      <form id="rsvpForm">
+      <!-- Replace YOUR_EMAIL@gmail.com with your actual email address -->
+      <form action="https://formsubmit.co/YOUR_EMAIL@gmail.com" method="POST">
+        
+        <!-- Optional: Disables captcha so it submits cleanly -->
+        <input type="hidden" name="_captcha" value="false">
+        
         <div class="form-group">
           <label for="fullName">Full Name <span class="ar">الاسم بالكامل</span></label>
-          <input type="text" id="fullName" placeholder="اسمك الكريم" required>
+          <input type="text" id="fullName" name="Full Name" placeholder="اسمك الكريم" required>
         </div>
 
         <div class="form-group">
           <label>Will you attend? <span class="ar">هل ستتمكن من الحضور؟</span></label>
           <div class="radio-group">
             <label class="radio-option">
-              <input type="radio" name="attending" value="نعم" required> نعم
+              <input type="radio" name="Attending" value="نعم" required> نعم
             </label>
             <label class="radio-option">
-              <input type="radio" name="attending" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
+              <input type="radio" name="Attending" value="للأسف، لا أستطيع الحضور"> للأسف، لا أستطيع الحضور
             </label>
           </div>
         </div>
@@ -370,32 +364,6 @@
     </div>
 
   </div>
-
-  <script>
-    const scriptURL = https://script.google.com/macros/s/AKfycbxn_YvCPqYtNTglgGvSlaIMe12PCSz5NYtI1Qdlebuy_TdHWkRGRQc7G-zZmu2JwN7o/exec;
-    const form = document.getElementById('rsvpForm');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      
-      const formData = {
-        fullName: document.getElementById('fullName').value,
-        attending: document.querySelector('input[name="attending"]:checked').value
-      };
-
-      fetch(scriptURL, { 
-        method: 'POST', 
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      .then(() => {
-        alert('تم إرسال ردك بنجاح! شكراً لك.');
-        form.reset();
-      })
-      .catch(error => console.error('Error!', error.message));
-    });
-  </script>
 
 </body>
 </html>
