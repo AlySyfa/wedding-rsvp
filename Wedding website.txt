@@ -103,7 +103,7 @@
 </div>
 
 <script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzIsQZ7vZv9A7lSAp8UKyWDSM0Ejb2R3csqHDZifv8OM-v7NulCoiVNv6hCnxTX3pc3/exec';
+    const scriptURL = https://script.google.com/macros/s/AKfycbw8bDVoh130b_dDm9GctjfaHRyiZGAIzX7pJGTpaFJieRcpT2vG8UkF5xpdP_ouBXqL/exec;
     const form = document.getElementById('rsvpForm');
     const statusMsg = document.getElementById('statusMessage');
 
