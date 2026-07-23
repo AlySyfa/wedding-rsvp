@@ -3,33 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>فرح علي و سارة | Aly & Sarah's Wedding</title>
+  <title>حفل زفاف علي و سارة | Aly & Sarah</title>
   
-  <!-- Fonts: Arslan Wessam Calligraphy & Montserrat -->
+  <!-- Premium Editorial Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
   
   <style>
-    /* Arslan Wessam Web Font Integration */
-    @font-face {
-      font-family: 'Arslan Wessam A';
-      src: url('https://fonts.cdnfonts.com/s/73173/ArslanWessamA.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-      font-display: swap;
-    }
-
     :root {
-      --card-bg: rgba(255, 255, 255, 0.94);
-      --primary-color: #8c4a57; /* Rich Dusty Rose / Berry */
-      --primary-hover: #733b46;
-      --text-main: #2d2325;
-      --text-muted: #6b5c60;
-      --accent-rose: #b87380;
-      --accent-gold: #c9935f; /* Warm Gold */
-      --border-color: #ebd3d8;
-      --radius: 28px;
+      --bg-color: #F9F8F6; /* Alabaster / Warm White */
+      --primary-color: #946E6B; /* Elegant Muted Rose / Taupe */
+      --text-main: #3C3532; /* Soft Charcoal */
+      --text-muted: #7A726E;
+      --border-color: #D4C9C3;
     }
 
     * {
@@ -39,169 +26,138 @@
     }
 
     body {
-      font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif; 
-      
-      /* Rich Romantic Gradient Background */
-      background: linear-gradient(135deg, #fce8ec 0%, #f5d4dc 40%, #eabcc7 75%, #ebd8cb 100%);
-      background-attachment: fixed;
-      
+      background-color: var(--bg-color);
       color: var(--text-main);
+      font-family: 'Amiri', serif;
       display: flex;
       justify-content: center;
-      align-items: center;
       min-height: 100vh;
-      padding: 50px 20px;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* Expanded Container for Spacing & Breathability */
-    .container {
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 2px solid rgba(255, 255, 255, 0.95);
-      box-shadow: 0 30px 60px rgba(140, 74, 87, 0.18);
-      border-radius: var(--radius);
-      padding: 60px 50px 50px;
-      max-width: 680px; /* Increased from 540px */
+    /* Main Editorial Wrapper */
+    .wedding-wrapper {
+      background: #FFFFFF;
+      max-width: 600px;
       width: 100%;
-      text-align: center;
+      margin: 40px 20px;
+      padding: 60px 40px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+      border: 1px solid #EAE3DE;
       position: relative;
-      overflow: hidden;
     }
 
-    /* Soft Corner Accents */
-    .decor {
-      position: absolute;
-      font-size: 2rem;
-      user-select: none;
-      pointer-events: none;
-      opacity: 0.85;
-    }
-    .top-left { top: 20px; left: 20px; transform: rotate(-20deg); }
-    .top-right { top: 20px; right: 20px; transform: rotate(20deg); }
-    .bottom-left { bottom: 20px; left: 20px; transform: rotate(15deg); }
-    .bottom-right { bottom: 20px; right: 20px; transform: rotate(-15deg); }
-
-    /* Prominent Hero Photo */
-    .photo-container {
-      margin-bottom: 25px;
-      display: flex;
-      justify-content: center;
+    /* --- Hero Image (Editorial Arch) --- */
+    .hero-section {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
     .hero-photo {
-      width: 220px; /* Scaled up from 150px */
-      height: 220px;
+      width: 100%;
+      max-width: 320px;
+      height: 420px;
       object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--accent-gold);
-      box-shadow: 0 12px 28px rgba(140, 74, 87, 0.22);
-      transition: transform 0.4s ease;
+      /* The modern arch crop */
+      border-radius: 200px 200px 10px 10px;
+      margin: 0 auto 30px;
+      display: block;
+      box-shadow: 0 15px 30px rgba(148, 110, 107, 0.15);
+      border: 1px solid #F3EDE9;
     }
 
-    .hero-photo:hover {
-      transform: scale(1.02);
-    }
-
+    /* --- Typography --- */
     .names-header {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
+      text-align: center;
     }
 
     .names-header h2 {
-      font-size: 2rem;
-      color: var(--accent-gold);
-      font-weight: 600;
-      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 15px;
     }
 
     .names-header h1.arabic-names {
-      font-size: 4rem; /* Prominent Calligraphy Heading */
+      font-size: 3.5rem;
       color: var(--primary-color);
-      line-height: 1.25;
-      font-weight: 700;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 5px;
     }
 
     .names-header h1.english-names {
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      letter-spacing: 3px;
-      color: var(--accent-rose);
-      font-weight: 600;
-      margin-top: 8px;
+      color: var(--primary-color);
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .divider {
+      width: 1px;
+      height: 60px;
+      background-color: var(--border-color);
+      margin: 0 auto 40px;
+    }
+
+    /* --- Location Details --- */
+    .details-section {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .details-section h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .venue-name {
+      font-size: 1.8rem;
+      color: var(--text-main);
+      margin-bottom: 15px;
+      font-weight: 400;
+    }
+
+    .maps-link {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: var(--primary-color);
+      text-decoration: none;
+      border-bottom: 1px solid var(--primary-color);
+      padding-bottom: 2px;
+      transition: opacity 0.3s ease;
       text-transform: uppercase;
     }
 
-    /* Elegant Divider Line */
-    .header-divider {
-      width: 120px;
-      height: 3px;
-      background-color: var(--accent-gold);
-      margin: 30px auto;
-      border-radius: 3px;
+    .maps-link:hover {
+      opacity: 0.7;
     }
 
-    /* Location Box */
-    .location-box {
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid var(--border-color);
-      border-radius: 18px;
-      padding: 28px 24px;
-      margin-bottom: 35px;
+    /* --- RSVP Form --- */
+    .rsvp-header {
       text-align: center;
-      box-shadow: 0 6px 20px rgba(140, 74, 87, 0.06);
-    }
-
-    .location-title {
-      font-size: 1.5rem;
+      font-size: 2.2rem;
       color: var(--primary-color);
-      font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
     }
 
-    .location-venue {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: var(--primary-color);
-      margin-bottom: 18px;
-    }
-
-    .maps-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 12px 28px;
-      background-color: #ffffff;
-      color: var(--primary-color);
-      border: 2px solid var(--primary-color);
-      border-radius: 12px;
-      font-family: 'Montserrat', 'Cairo', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(140, 74, 87, 0.08);
-    }
-
-    .maps-button:hover {
-      background-color: var(--primary-color);
-      color: #ffffff;
-      transform: translateY(-2px);
-    }
-
-    h3.rsvp-title {
-      font-size: 2.5rem;
-      color: var(--text-main);
-      margin-bottom: 8px;
-      font-weight: 700;
-    }
-
-    p.subtitle {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1rem;
+    .rsvp-subtitle {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
       color: var(--text-muted);
       margin-bottom: 35px;
-      font-style: italic;
+      font-size: 1.1rem;
     }
 
     form {
@@ -209,196 +165,211 @@
     }
 
     .form-group {
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
     label {
       display: block;
-      font-size: 1.35rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: var(--primary-color);
-    }
-    
-    label .en {
       font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
       font-weight: 500;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      margin-right: 8px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-main);
+      margin-bottom: 10px;
     }
 
+    label .ar {
+      font-family: 'Amiri', serif;
+      font-size: 1.1rem;
+      margin-left: 8px;
+      letter-spacing: 0;
+      text-transform: none;
+      color: var(--primary-color);
+    }
+
+    /* Minimalist Underline Inputs */
     input[type="text"],
     select {
       width: 100%;
-      padding: 16px 20px;
-      border: 1.5px solid var(--border-color);
-      border-radius: 14px;
-      font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif;
-      font-size: 1.25rem;
-      background: #ffffff;
-      transition: all 0.3s ease;
-      outline: none;
+      padding: 10px 0;
+      border: none;
+      border-bottom: 1px solid var(--border-color);
+      background: transparent;
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
       color: var(--text-main);
+      outline: none;
+      border-radius: 0; /* Override iOS styling */
+      transition: border-color 0.3s ease;
     }
 
     input:focus,
     select:focus {
-      border-color: var(--primary-color);
-      box-shadow: 0 0 0 4px rgba(140, 74, 87, 0.15);
+      border-bottom-color: var(--primary-color);
     }
 
+    /* Custom Select Arrow Styling */
+    select {
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A726E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: left 0 center;
+      background-size: 16px;
+      padding-left: 20px;
+    }
+
+    /* Elegant Radio Buttons */
     .radio-group {
       display: flex;
-      gap: 16px;
-      margin-top: 8px;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 15px;
     }
 
     .radio-option {
-      flex: 1;
       display: flex;
       align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px;
-      border: 1.5px solid var(--border-color);
-      border-radius: 14px;
-      background: #fff;
+      gap: 12px;
+      font-family: 'Amiri', serif;
+      font-size: 1.2rem;
+      color: var(--text-main);
       cursor: pointer;
-      transition: all 0.3s ease;
-      font-size: 1.3rem;
-      font-weight: 700;
-    }
-
-    .radio-option:hover {
-      border-color: var(--primary-color);
-      background-color: rgba(140, 74, 87, 0.04);
     }
 
     .radio-option input[type="radio"] {
-      accent-color: var(--primary-color);
-      width: 22px;
-      height: 22px;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      background: transparent;
+      transition: all 0.2s ease;
     }
 
+    .radio-option input[type="radio"]:checked {
+      border-color: var(--primary-color);
+    }
+
+    .radio-option input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--primary-color);
+    }
+
+    /* Solid Minimalist Button */
     button[type="submit"] {
       width: 100%;
-      padding: 18px;
-      background-color: var(--primary-color);
-      color: #ffffff;
+      padding: 16px;
+      background-color: var(--text-main);
+      color: #FFFFFF;
       border: none;
-      border-radius: 14px;
-      font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 3px;
+      text-transform: uppercase;
       cursor: pointer;
-      transition: all 0.3s ease;
+      transition: background-color 0.3s ease;
       margin-top: 20px;
-      box-shadow: 0 8px 20px rgba(140, 74, 87, 0.25);
     }
 
     button[type="submit"]:hover {
-      background-color: var(--primary-hover);
-      transform: translateY(-2px);
+      background-color: var(--primary-color);
     }
 
-    button[type="submit"]:active {
-      transform: scale(0.99);
-    }
-
-    /* Closing Message */
     .closing-message {
-      margin-top: 40px;
-      padding-top: 25px;
-      border-top: 1px stroke var(--border-color);
-      font-size: 1.5rem;
+      text-align: center;
+      margin-top: 50px;
+      font-family: 'Amiri', serif;
+      font-size: 1.4rem;
       color: var(--primary-color);
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .closing-message .heart {
-      color: #e26d7c;
-      display: inline-block;
-      margin-top: 4px;
     }
 
     @media (max-width: 600px) {
-      .container { padding: 45px 25px 35px; }
-      .hero-photo { width: 170px; height: 170px; }
-      .names-header h1.arabic-names { font-size: 3.2rem; }
-      .names-header h1.english-names { font-size: 1.6rem; }
-      .radio-group { flex-direction: column; gap: 12px; }
+      .wedding-wrapper { margin: 0; padding: 40px 25px; border: none; box-shadow: none; }
+      .hero-photo { height: 350px; }
+      .names-header h1.arabic-names { font-size: 3rem; }
+      .names-header h1.english-names { font-size: 1.8rem; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <span class="decor top-left">🦋🌺</span>
-    <span class="decor top-right">🌸🦋</span>
-    <span class="decor bottom-left">🌸🍃</span>
-    <span class="decor bottom-right">🍃🦋</span>
-
-    <!-- Prominent Hero Photo -->
-    <div class="photo-container">
+  <div class="wedding-wrapper">
+    
+    <div class="hero-section">
+      <!-- Your image applied to the modern editorial arch -->
       <img src="./WhatsApp%20Image%202026-07-23%20at%201.04.38%20PM.jpeg" alt="Aly & Sarah" class="hero-photo">
     </div>
 
     <div class="names-header">
-      <h2>فرح / Wedding</h2>
+      <h2>Wedding Celebration</h2>
       <h1 class="arabic-names">علي و سارة</h1>
       <h1 class="english-names">Aly & Sarah</h1>
     </div>
 
-    <div class="header-divider"></div>
+    <div class="divider"></div>
 
-    <!-- Location Box -->
-    <div class="location-box">
-      <div class="location-title">المكان والعنوان / Venue & Location</div>
-      <div class="location-venue">فيلا لا ريفا (Villa La Riva)</div>
-      <a href="https://maps.app.goo.gl/pXPJq47gDfPK4TQu7" target="_blank" rel="noopener noreferrer" class="maps-button">
-        🗺️ فتح على خرائط جوجل / Google Maps
+    <div class="details-section">
+      <h3>Venue</h3>
+      <div class="venue-name">فيلا لا ريفا (Villa La Riva)</div>
+      <a href="https://maps.app.goo.gl/pXPJq47gDfPK4TQu7" target="_blank" rel="noopener noreferrer" class="maps-link">
+        View on Google Maps
       </a>
     </div>
 
-    <h3 class="rsvp-title">يسعدنا حضوركم!</h3>
-    <p class="subtitle">Please let us know if you can join us.</p>
+    <div class="divider"></div>
 
-    <form id="rsvpForm">
-      <div class="form-group">
-        <label for="fullName">الاسم بالكامل <span class="en">/ Full Name</span></label>
-        <input type="text" id="fullName" placeholder="اسمك الكريم" required>
-      </div>
+    <div class="rsvp-section">
+      <h2 class="rsvp-header">يسعدنا حضوركم</h2>
+      <p class="rsvp-subtitle">Kindly Reply</p>
 
-      <div class="form-group">
-        <label>هل ستتمكن من الحضور؟ <span class="en">/ Will you attend?</span></label>
-        <div class="radio-group">
-          <label class="radio-option">
-            <input type="radio" name="attending" value="yes" required> نعم
-          </label>
-          <label class="radio-option">
-            <input type="radio" name="attending" value="no"> للأسف، لا أستطيع الحضور
-          </label>
+      <form id="rsvpForm">
+        <div class="form-group">
+          <label for="fullName">Full Name <span class="ar">الاسم بالكامل</span></label>
+          <input type="text" id="fullName" required>
         </div>
-      </div>
 
-      <div class="form-group">
-        <label for="guests">عدد الأفراد <span class="en">/ Number of Guests</span></label>
-        <select id="guests">
-          <option value="1">فرد واحد (1)</option>
-          <option value="2">فردين (2)</option>
-          <option value="3">3 أفراد (3)</option>
-          <option value="4">4 أفراد (4)</option>
-        </select>
-      </div>
+        <div class="form-group">
+          <label>Will you attend? <span class="ar">هل ستتمكن من الحضور؟</span></label>
+          <div class="radio-group">
+            <label class="radio-option">
+              <input type="radio" name="attending" value="yes" required> نعم
+            </label>
+            <label class="radio-option">
+              <input type="radio" name="attending" value="no"> للأسف، لا أستطيع الحضور
+            </label>
+          </div>
+        </div>
 
-      <button type="submit">تأكيد الحضور / Submit RSVP</button>
-    </form>
+        <div class="form-group">
+          <label for="guests">Number of Guests <span class="ar">عدد الأفراد</span></label>
+          <select id="guests">
+            <option value="1">فرد واحد (1)</option>
+            <option value="2">فردين (2)</option>
+            <option value="3">3 أفراد (3)</option>
+            <option value="4">4 أفراد (4)</option>
+          </select>
+        </div>
+
+        <button type="submit">Submit RSVP</button>
+      </form>
+    </div>
 
     <div class="closing-message">
-      مش هتكمل فرحتنا غير بوجودكم معانا! <span class="heart">💖</span>
+      مش هتكمل فرحتنا غير بوجودكم معانا!
     </div>
+
   </div>
 
 </body>
