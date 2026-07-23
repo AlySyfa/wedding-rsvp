@@ -21,15 +21,15 @@
     }
 
     :root {
-      --bg-color: #eef5f4;
+      --bg-color: #fdf6f7; /* Soft Light Blush Pink */
       --card-bg: rgba(255, 255, 255, 0.95);
-      --primary-color: #1a4d4a; /* Elegant Deep Teal Green */
-      --primary-hover: #123836;
-      --text-main: #2c302e;
-      --text-muted: #666;
-      --accent-teal: #2a6b63;
-      --accent-gold: #c5a059;
-      --border-color: #d1deda;
+      --primary-color: #9e5b68; /* Rose Plum / Dusty Rose */
+      --primary-hover: #824753;
+      --text-main: #3a2e31;
+      --text-muted: #78686c;
+      --accent-rose: #c88a95; /* Soft Berry Accent */
+      --accent-gold: #d4a373; /* Warm Rose Gold */
+      --border-color: #f0d8dd;
       --radius: 18px;
     }
 
@@ -43,8 +43,8 @@
       font-family: 'Arslan Wessam A', 'Aref Ruqaa', serif; 
       background-color: var(--bg-color);
       
-      /* Clean Subtle Pattern Background */
-      background-image: radial-gradient(rgba(26, 77, 74, 0.12) 1.5px, transparent 1.5px);
+      /* Subtle Pink Floral Dot Pattern */
+      background-image: radial-gradient(rgba(200, 138, 149, 0.18) 1.5px, transparent 1.5px);
       background-size: 24px 24px;
       
       color: var(--text-main);
@@ -59,8 +59,8 @@
       background: var(--card-bg);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 2px solid rgba(255, 255, 255, 0.8);
-      box-shadow: 0 20px 45px rgba(26, 77, 74, 0.12);
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 20px 45px rgba(158, 91, 104, 0.12);
       border-radius: var(--radius);
       padding: 50px 40px 40px;
       max-width: 540px;
@@ -104,7 +104,7 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 1.8rem;
       letter-spacing: 2px;
-      color: var(--accent-teal);
+      color: var(--accent-rose);
       font-weight: 500;
       margin-top: 5px;
     }
@@ -116,6 +116,68 @@
       background-color: var(--accent-gold);
       margin: 25px auto;
       border-radius: 2px;
+    }
+
+    /* Location Card Section */
+    .location-box {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(158, 91, 104, 0.05);
+    }
+
+    .location-title {
+      font-size: 1.4rem;
+      color: var(--primary-color);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .location-venue {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 4px;
+    }
+
+    .location-subvenue {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 10px;
+    }
+
+    .location-details {
+      font-family: 'Cairo', 'Amiri', serif;
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    .maps-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: var(--primary-color);
+      border: 1.5px solid var(--primary-color);
+      border-radius: 8px;
+      font-family: 'Montserrat', 'Cairo', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .maps-button:hover {
+      background-color: var(--primary-color);
+      color: #ffffff;
     }
 
     h3.rsvp-title {
@@ -182,7 +244,7 @@
     input:focus,
     select:focus {
       border-color: var(--primary-color);
-      box-shadow: 0 0 0 4px rgba(26, 77, 74, 0.15);
+      box-shadow: 0 0 0 4px rgba(158, 91, 104, 0.15);
     }
 
     .radio-group {
@@ -209,7 +271,7 @@
 
     .radio-option:hover {
       border-color: var(--primary-color);
-      background-color: rgba(26, 77, 74, 0.04);
+      background-color: rgba(158, 91, 104, 0.04);
     }
 
     .radio-option input[type="radio"] {
@@ -253,7 +315,7 @@
     }
 
     .closing-message .heart {
-      color: #d9534f;
+      color: #e26d7c;
       display: inline-block;
       margin-top: 4px;
     }
@@ -280,6 +342,19 @@
     </div>
 
     <div class="header-divider"></div>
+
+    <!-- Location Section -->
+    <div class="location-box">
+      <div class="location-title">📍 المكان والعنوان / Venue & Location</div>
+      <div class="location-venue">فيلا لا ريفا (Villa La Riva)</div>
+      <div class="location-subvenue">جزيرة بين البحرين</div>
+      <div class="location-details">
+        الدخول بالمركب الخاص بالمكان من المنيب، آخر شارع البحر الأعظم بعد مترو المنيب بـ ٥٠٠ متر، تحت كوبري الاصبجي، بجوار مدخل حدائق الري.
+      </div>
+      <a href="https://maps.app.goo.gl/pXPJq47gDfPK4TQu7" target="_blank" rel="noopener noreferrer" class="maps-button">
+        🗺️ فتح على خرائط جوجل / Google Maps
+      </a>
+    </div>
 
     <h3 class="rsvp-title">يسعدنا حضوركم!</h3>
     <p class="subtitle">Please let us know if you can join us.</p>
