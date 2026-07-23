@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>حفل زفاف علي و سارة | Aly & Sarah</title>
   
-  <!-- Ultra-Premium Editorial Fonts -->
+  <!-- Premium Editorial Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-stone: #EFECE6; /* Sophisticated Stone/Linen */
-      --card-white: #FFFFFF;
-      --text-dark: #1C1B1A; /* Off-black for softer contrast */
-      --text-muted: #6B6863;
-      --accent-taupe: #9E9689;
-      --border-thin: #E0DDD8;
+      --primary-color: #946E6B; /* Elegant Muted Rose / Taupe */
+      --primary-hover: #7a5856;
+      --text-main: #3C3532; /* Soft Charcoal */
+      --text-muted: #7A726E;
+      --border-color: #d8cec8;
+      --input-bg: #FAF6F5; /* Very soft tinted box background */
     }
 
     * {
@@ -27,135 +27,130 @@
     }
 
     body {
-      background-color: var(--bg-stone);
-      color: var(--text-dark);
-      font-family: 'Amiri', 'Playfair Display', serif;
+      /* Vibrant but elegant blush-to-champagne gradient background */
+      background: linear-gradient(135deg, #f2d5d9 0%, #fae6e9 40%, #eed6cc 100%);
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Amiri', serif;
       display: flex;
       justify-content: center;
       min-height: 100vh;
-      padding: 60px 20px;
+      padding: 40px 20px;
       -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Minimalist Gallery Matting */
+    /* Main Editorial Wrapper with subtle glass effect */
     .wedding-wrapper {
-      background: var(--card-white);
-      max-width: 640px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      max-width: 600px;
       width: 100%;
-      padding: 80px 60px;
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.04);
+      padding: 60px 45px;
+      box-shadow: 0 25px 50px rgba(148, 110, 107, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 20px;
       position: relative;
     }
 
-    /* --- Editorial Portrait --- */
+    /* --- Hero Image (Editorial Arch) --- */
     .hero-section {
       text-align: center;
-      margin-bottom: 50px;
-      position: relative;
+      margin-bottom: 40px;
     }
 
     .hero-photo {
       width: 100%;
-      max-width: 380px;
-      height: 500px;
+      max-width: 300px;
+      height: 400px;
       object-fit: cover;
+      /* The modern arch crop */
+      border-radius: 200px 200px 12px 12px;
+      margin: 0 auto 30px;
       display: block;
-      margin: 0 auto;
-      /* Fine Art Inner Frame Effect */
-      outline: 1px solid var(--border-thin);
-      outline-offset: -12px;
-      filter: contrast(1.05) sepia(0.05); /* Very slight warm/film tint */
+      box-shadow: 0 15px 35px rgba(148, 110, 107, 0.25);
+      border: 4px solid #FFFFFF;
     }
 
-    /* --- High-End Typography --- */
+    /* --- Typography --- */
     .names-header {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       text-align: center;
     }
 
     .names-header h2 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.3em;
+      font-size: 0.95rem;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 25px;
-      font-weight: 400;
+      margin-bottom: 15px;
     }
 
     .names-header h1.arabic-names {
-      font-size: 3.5rem;
-      color: var(--text-dark);
-      font-weight: 400;
+      font-size: 3.6rem;
+      color: var(--primary-color);
+      font-weight: 700;
       line-height: 1.1;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
     .names-header h1.english-names {
       font-family: 'Playfair Display', serif;
       font-size: 2.2rem;
-      color: var(--text-dark);
+      color: var(--primary-color);
       font-weight: 400;
       font-style: italic;
     }
 
-    /* Minimalist Divider */
-    .divider {
-      width: 40px;
-      height: 1px;
-      background-color: var(--accent-taupe);
-      margin: 0 auto 50px;
-    }
-
-    /* --- Venue Details --- */
+    /* --- Location Details --- */
     .details-section {
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 50px;
     }
 
     .details-section h3 {
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.25em;
+      font-size: 0.9rem;
+      letter-spacing: 2px;
       text-transform: uppercase;
       color: var(--text-muted);
-      margin-bottom: 15px;
-      font-weight: 400;
+      margin-bottom: 10px;
+      font-weight: 600;
     }
 
     .venue-name {
-      font-size: 1.6rem;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-      font-weight: 400;
+      font-size: 1.8rem;
+      color: var(--text-main);
+      margin-bottom: 15px;
+      font-weight: 700;
     }
 
     .maps-link {
       display: inline-block;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      letter-spacing: 0.15em;
-      color: var(--text-dark);
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      color: var(--primary-color);
       text-decoration: none;
-      border-bottom: 1px solid var(--text-dark);
-      padding-bottom: 4px;
-      transition: color 0.3s ease, border-color 0.3s ease;
+      border-bottom: 1px solid var(--primary-color);
+      padding-bottom: 2px;
+      font-weight: 600;
+      transition: opacity 0.3s ease;
       text-transform: uppercase;
     }
 
     .maps-link:hover {
-      color: var(--accent-taupe);
-      border-color: var(--accent-taupe);
+      opacity: 0.7;
     }
 
-    /* --- Haute Couture RSVP Form --- */
+    /* --- RSVP Form --- */
     .rsvp-header {
       text-align: center;
-      font-size: 2rem;
-      color: var(--text-dark);
-      margin-bottom: 10px;
-      font-weight: 400;
+      font-size: 2.4rem;
+      color: var(--primary-color);
+      margin-bottom: 5px;
+      font-weight: 700;
     }
 
     .rsvp-subtitle {
@@ -163,8 +158,8 @@
       font-family: 'Playfair Display', serif;
       font-style: italic;
       color: var(--text-muted);
-      margin-bottom: 45px;
-      font-size: 1.1rem;
+      margin-bottom: 35px;
+      font-size: 1.2rem;
     }
 
     form {
@@ -172,99 +167,108 @@
     }
 
     .form-group {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
+    /* Highlighted labels */
     label {
       display: block;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: 0.1em;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: var(--text-muted);
-      margin-bottom: 10px;
+      color: var(--text-main);
+      margin-bottom: 12px;
     }
 
     label .ar {
       font-family: 'Amiri', serif;
-      font-size: 1rem;
-      margin-left: 10px;
+      font-size: 1.2rem;
+      margin-left: 8px;
       letter-spacing: 0;
       text-transform: none;
-      color: var(--text-dark);
+      color: var(--primary-color);
+      font-weight: 700;
     }
 
-    /* Elegant Line Inputs (No Boxes) */
+    /* Obvious, Boxy Inputs */
     input[type="text"],
     select {
       width: 100%;
-      padding: 12px 0;
-      border: none;
-      border-bottom: 1px solid var(--border-thin);
-      background: transparent;
+      padding: 16px 20px;
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px; /* Smooth rounded boxes */
+      background: var(--input-bg);
       font-family: 'Amiri', serif;
-      font-size: 1.3rem;
-      color: var(--text-dark);
+      font-size: 1.2rem;
+      color: var(--text-main);
       outline: none;
-      border-radius: 0;
-      transition: border-color 0.4s ease;
+      box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
     }
 
     input:focus,
     select:focus {
-      border-bottom-color: var(--text-dark);
+      border-color: var(--primary-color);
+      background: #FFFFFF;
+      box-shadow: 0 0 0 4px rgba(148, 110, 107, 0.15);
     }
 
-    input::placeholder {
-      color: #C0BBB4;
-      font-style: italic;
-    }
-
-    /* Minimal Select Arrow */
+    /* Custom Select Arrow Styling */
     select {
       appearance: none;
-      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231C1B1A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237A726E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
       background-repeat: no-repeat;
-      background-position: left 0 center;
-      background-size: 14px;
-      padding-left: 20px;
-      cursor: pointer;
+      background-position: left 15px center;
+      background-size: 16px;
+      padding-left: 40px;
     }
 
-    /* Restrained Radio Buttons */
+    /* Obvious Radio Card Boxes */
     .radio-group {
       display: flex;
       flex-direction: column;
-      gap: 15px;
-      margin-top: 15px;
+      gap: 14px;
     }
 
     .radio-option {
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
       font-family: 'Amiri', serif;
       font-size: 1.2rem;
-      color: var(--text-dark);
+      font-weight: 700;
+      color: var(--text-main);
       cursor: pointer;
+      border: 1.5px solid var(--border-color);
+      border-radius: 12px;
+      padding: 16px 20px;
+      background: var(--input-bg);
+      transition: all 0.3s ease;
+    }
+
+    .radio-option:hover {
+      border-color: var(--primary-color);
+      background: #FFFFFF;
     }
 
     .radio-option input[type="radio"] {
       appearance: none;
-      width: 16px;
-      height: 16px;
-      border: 1px solid var(--accent-taupe);
+      width: 22px;
+      height: 22px;
+      border: 2px solid var(--border-color);
       border-radius: 50%;
       outline: none;
       cursor: pointer;
       position: relative;
-      background: transparent;
-      transition: all 0.3s ease;
+      background: #FFFFFF;
+      transition: all 0.2s ease;
     }
 
     .radio-option input[type="radio"]:checked {
-      border-color: var(--text-dark);
+      border-color: var(--primary-color);
+      background: var(--primary-color);
     }
 
     .radio-option input[type="radio"]:checked::after {
@@ -273,46 +277,53 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 6px;
-      height: 6px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: var(--text-dark);
+      background: #FFFFFF;
     }
 
-    /* Stark, Modern Submit Button */
+    /* Solid Minimalist Button */
     button[type="submit"] {
       width: 100%;
-      padding: 20px;
-      background-color: var(--text-dark);
-      color: var(--card-white);
+      padding: 18px;
+      background-color: var(--primary-color);
+      color: #FFFFFF;
       border: none;
+      border-radius: 12px;
       font-family: 'Montserrat', sans-serif;
-      font-size: 0.8rem;
-      font-weight: 400;
-      letter-spacing: 0.25em;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 3px;
       text-transform: uppercase;
       cursor: pointer;
-      transition: background-color 0.4s ease;
-      margin-top: 20px;
+      transition: background-color 0.3s ease, transform 0.1s ease;
+      margin-top: 10px;
+      box-shadow: 0 8px 20px rgba(148, 110, 107, 0.3);
     }
 
     button[type="submit"]:hover {
-      background-color: var(--accent-taupe);
+      background-color: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+    
+    button[type="submit"]:active {
+      transform: scale(0.99);
     }
 
     .closing-message {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 50px;
       font-family: 'Amiri', serif;
-      font-size: 1.4rem;
-      color: var(--text-dark);
-      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-color);
     }
 
     @media (max-width: 600px) {
-      body { padding: 0; background-color: var(--card-white); }
-      .wedding-wrapper { padding: 40px 25px 60px; box-shadow: none; max-width: 100%; }
-      .hero-photo { height: 420px; }
+      body { padding: 15px; }
+      .wedding-wrapper { padding: 40px 25px; border-radius: 16px; }
+      .hero-photo { height: 340px; }
       .names-header h1.arabic-names { font-size: 3rem; }
       .names-header h1.english-names { font-size: 1.8rem; }
     }
@@ -323,7 +334,7 @@
   <div class="wedding-wrapper">
     
     <div class="hero-section">
-      <!-- Portrait framing with subtle inner matte line -->
+      <!-- Your image applied to the modern editorial arch -->
       <img src="./WhatsApp%20Image%202026-07-23%20at%201.04.38%20PM.jpeg" alt="Aly & Sarah" class="hero-photo">
     </div>
 
@@ -333,17 +344,13 @@
       <h1 class="english-names">Aly & Sarah</h1>
     </div>
 
-    <div class="divider"></div>
-
     <div class="details-section">
-      <h3>Venue <span style="font-family: 'Amiri', serif; font-size: 1.1rem; color: var(--text-dark); text-transform: none; margin-right: 8px;">المكان</span></h3>
+      <h3>Venue <span style="font-family: 'Amiri', serif; font-size: 1.1rem; color: var(--primary-color); text-transform: none; margin-right: 5px;">المكان</span></h3>
       <div class="venue-name">فيلا لا ريفا (Villa La Riva)</div>
       <a href="https://maps.app.goo.gl/pXPJq47gDfPK4TQu7" target="_blank" rel="noopener noreferrer" class="maps-link">
         View on Google Maps
       </a>
     </div>
-
-    <div class="divider"></div>
 
     <div class="rsvp-section">
       <h2 class="rsvp-header">يسعدنا حضوركم</h2>
@@ -382,7 +389,7 @@
     </div>
 
     <div class="closing-message">
-      مش هتكمل فرحتنا غير بوجودكم معانا
+      مش هتكمل فرحتنا غير بوجودكم معانا!
     </div>
 
   </div>
